@@ -1,21 +1,27 @@
 ## PROJECT NAME
-# QUOTES PROJECT
+# PASSWORD LOCKER PROJECT
 
 ## AUTHOR NAME
 # TRACY OGUTU
 
 ## PROJECT DESCRIPTION
-This project is an angular application that allows a user to input a quote, have it voted on and deleted when necessary. It contains:
+This project is a password vault that allows a user to save various account names and passwords for future reference. It contains:
  
- * _A user input form_
- * _A display of quotes_
- * _A description of the quote details such as:_
+ * _A user interactive terminal that has prompts for:_
+ 
+    * _Name of user_
 
-    * _Author_
+    * _Password of the user_
 
-    * _Name of the user_
+    * _Name of the account_
 
-    * _Time lapse since the quote was posted_
+      * _Account username_
+
+      * _Account password_
+
+   
+
+
     
  
 ## PROJECT SET UP INSTRUCTIONS
@@ -24,41 +30,35 @@ This project was generated with python version 3.6.8
 
 ## Accessing the shell
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Run `python3.6 <name-of-file>` to use the shell 
 
-## Running end-to-end tests
+## Running the file
+Add the shebang at the beginning of your run.py file
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run chmod +x run.py on your terminal
+
+Run ./run.py
 
 ## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+To get more help on python, check out the python documentation at https://docs.python.org/3/library/
 
 
 
 ## USER INTERACTION
 
-1. To post a quote, scroll to the Quote input Form
-2. Fill in your favorite quote, author, date and your name
-3. You will then view the posted quote on the website
+1. To run the application, type ./run2.py
+2. Enter your name
+3. You will then view a list of options to navigate the password locker
 
 
 ## TECHNOLOGIES USED
 
 _LANGUAGES_
 
-* _Angular JS_
-
-* _Html_
-
-* _CSS_
+* _Python_
 
 * _Markdown_
 
-
-_FRAMEWORK_
-
-* _Bootstrap_
 
 ## CONTACT INFORMATION
 
