@@ -1,5 +1,6 @@
 import unittest
 from user import User
+from credential import Credential
 
 class TestUser(unittest.TestCase):
 
@@ -53,6 +54,16 @@ class TestUser(unittest.TestCase):
     def test_display_all_users(self):
 
         self.assertEqual(User.display_users(),User.user_list)
+
+    def test_login(self):
+        self.new_user.save_user()
+        test_user= User("Yoni","345678")
+        test_user.save_user()
+
+        found_credential= User.login("Yoni","345678")
+        self.assertEqual(found_credential,Credential.credential_list)
+
+
 
 
 

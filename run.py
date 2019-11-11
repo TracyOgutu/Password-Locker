@@ -13,6 +13,15 @@ def save_users(user):
 def del_user(user):
     user.delete_user()
 
+def login(user,passw):
+    login = User.login(user,passw)
+    if login != False:
+        return User.login(user,passw)
+
+def generate_password(name):
+    password=Credential.generate_password()
+    return password
+
 def find_user(username):
     return User.find_by_username(username)
 
@@ -107,22 +116,22 @@ def main():
                             print("\n")
                             print("Log into Password Locker Account")
                             print("Enter the user name")
-                            user_name = input()
+                            user = input()
 
                             print("Enter the password")
-                            user_password = input()
+                            passw = input()
 
 
-                    if user_log_in(user_name,user_password) == None:
+                    if login(user,passw) == None:
                         print("\n")
                         print("Please try again or create an account")
                         print("\n")
 
                     else:
 
-                        user_log_in(user_name,user_password)
+                        login(user,passw)
                         print("\n")
-                        print(f'''{user_name} welcome to your Credentials\n
+                        print(f'''{user} welcome to your Credentials\n
                         Use these short codes to get around''')
 
 
