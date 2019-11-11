@@ -1,4 +1,5 @@
 #!/usr/bin/env python3.6
+import random
 from user import User
 from credential import Credential
 
@@ -167,12 +168,28 @@ def main():
                         print("Name of the account ...")
                         accname = input()
 
-                        print("Password of the credential ...")
-                        accpass = input()
+                        print('''Choose password option\n ap:Automatically generated password \n mp.Make your own password''')
+                        
+                        option = input()
+                        
+
+                        if option == 'mp':
+                            print("Password of the credential ...")
+                            acc_pass = input().lower()
+                        else:
+                            x = []
+                            r = range(10,500)
+                            for n in r:
+                                x.append(str(n))
+                            acc_pass = (username+accname+random.choice(x))
+                            print(f"Your generated password is: {acc_pass}")
+                        # else:
+                        #     print("Please select the correct short code")
+
 
                         # Create and save new user
                         save_credentials(create_credential(
-                            username, accname, accpass))
+                            username, accname, acc_pass))
 
                         print("\n")
                         print(
