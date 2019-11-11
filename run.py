@@ -50,6 +50,15 @@ def main():
         print(f"Hello {user_name}. what would you like to do?")
         print('\n')
 
+        while True:
+                    print('''Use these short codes :
+                     cc - create a password locker account \n
+                     dc - display users\n
+                     fc -find a user\n
+                     ex -exit the password locker\n ''')
+
+                    short_code = input().lower()
+
 if __name__ == '__main__':
         main()
 
