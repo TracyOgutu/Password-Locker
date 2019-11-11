@@ -1,4 +1,5 @@
 import unittest
+
 from credential import Credential
 
 class TestCredential(unittest.TestCase):
@@ -8,7 +9,7 @@ class TestCredential(unittest.TestCase):
 
     def test_init(self):
 
-        self.assertEqual(self.new_credential.username,"Yani")
+        self.assertEqual(self.new_credential.user_name,"Yani")
         self.assertEqual(self.new_credential.accountname,"Twitter")
         self.assertEqual(self.new_credential.accountpassword,"mytweet")
 
@@ -24,6 +25,7 @@ class TestCredential(unittest.TestCase):
         test_credential.save_credential()
         self.assertEqual(len(Credential.credential_list),2)
 
+
     def test_delete_credential(self):
         self.new_credential.save_credential()
         test_credential=Credential("Yoni","Instagram","myinsta")
@@ -33,6 +35,7 @@ class TestCredential(unittest.TestCase):
         self.new_credential.delete_credential()
         self.assertEqual(len(Credential.credential_list),1)
 
+    
     def test_generate_password(self):
         generated_password=self.new_credential.generate_password()
         self.assertEqual(len(generated_password),8)
@@ -51,8 +54,6 @@ class TestCredential(unittest.TestCase):
 
         test_credential=Credential("Yoni","Instagram","myinsta")
         test_credential.save_credential()
-        
-       
 
         credential_exists=Credential.credential_exist("Instagram")
 
@@ -62,7 +63,7 @@ class TestCredential(unittest.TestCase):
 
         self.assertEqual(Credential.display_credentials(),Credential.credential_list)
 
-    if __name__ == '__main__':
-        unittest.main()
+if __name__ == '__main__':
+    unittest.main()
 
     
