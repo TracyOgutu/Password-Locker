@@ -179,7 +179,7 @@ def main():
                         else:
                             x = []
                             r = range(10,500)
-                            for n in r
+                            for n in r:
                                 x.append(str(n))
                             acc_pass = (username+accname+random.choice(x))
                             print(f"Your generated password is: {acc_pass}")
