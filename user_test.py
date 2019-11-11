@@ -63,11 +63,12 @@ class TestUser(unittest.TestCase):
         found_credential= User.login("Yoni","345678")
         self.assertEqual(found_credential,Credential.credential_list)
 
-
-
-
-
-
-
 if __name__ == '__main__':
     unittest.main()
+
+
+
+
+
+
+
