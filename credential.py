@@ -1,10 +1,12 @@
 from random import choice
 import string
+# from user import User
+
 class Credential:
 
-    def __init__(self,username,accountname,accountpassword):
+    def __init__(self,user_name,accountname,accountpassword):
 
-        self.username=username
+        self.user_name=user_name
         self.accountname=accountname
         self.accountpassword=accountpassword
 
@@ -49,3 +51,5 @@ class Credential:
         password = ''.join( choice(alphanum) for num in range(size) )
         
         return password
+
+    
